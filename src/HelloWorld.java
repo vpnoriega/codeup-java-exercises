@@ -33,7 +33,9 @@ System.out.println(myString);
 
 //        int x = 5;
 //        System.out.println(++x);
-//        System.out.println(x);
+//        System.out.println(x); //add 1 to x first, then gave it a value
+
+        // int class = 0;
 
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
@@ -60,8 +62,11 @@ System.out.println(myString);
         //System.out.println(x);
         System.out.println(y);
 
-int max = Integer.MAX_VALUE;
-System.out.println(max);
+int z = Integer.MAX_VALUE;
+z+=1;
+System.out.println("z = " + z);
+
+
 
     }
 }
