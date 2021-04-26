@@ -21,5 +21,9 @@ public class ConsoleExercises {
         String userSentence = sc.nextLine();
         System.out.printf("The sentence you wrote was: %s\n", userSentence);
 
+
+
+
+
     }
 }
