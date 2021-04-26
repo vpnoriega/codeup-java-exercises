@@ -66,8 +66,9 @@ public class ControlFlowExercises {
             else {
                 System.out.println(i); //this replaces it because it does meet the condition listed above
             }
-
-
         }
+
+
+
     }
 }
