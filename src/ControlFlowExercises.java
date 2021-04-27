@@ -83,15 +83,27 @@ public class ControlFlowExercises {
         /** 3. Display a table of powers. */
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
-        int userNumber = sc.nextInt();
-        double userSquared = (Math.pow(userNumber,2));
-        double userCubed = (Math.pow(userNumber,3));
-        System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        System.out.println(userNumber+ "      |" + userSquared + "      |" + userCubed);
+        boolean confirmation;
+        do {
+            System.out.print("Enter an integer: ");
+            int userNumber = sc.nextInt();
+            double userSquared = (Math.pow(userNumber, 2));
+            double userCubed = (Math.pow(userNumber, 3));
 
+            System.out.println("Here is your table!");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for (int i = 1; i <= userNumber; i++) {
+
+                System.out.println(userNumber + "      |" + userSquared + "      |" + userCubed);
+            }
+
+            System.out.print("Continue? [y/n]\n");
+            String userInput = sc.next();
+            confirmation = userInput.equalsIgnoreCase("y");
+
+
+        } while(confirmation);
 
 
 
