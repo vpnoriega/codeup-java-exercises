@@ -82,6 +82,8 @@ public class ControlFlowExercises {
 
         /** 3. Display a table of powers. */
 
+        // ?? Can't figure out how to loop it from 1 to userInput, currently it only iterates the amount of the userInput
+
 //        Scanner sc = new Scanner(System.in);
 //        boolean confirmation;
 //        do {
