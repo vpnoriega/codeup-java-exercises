@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 public class MethodsExercises {
     // 1.)
@@ -7,7 +9,8 @@ public class MethodsExercises {
         System.out.println(Multiplication(3,2));
         System.out.println(Division(8,2));
         System.out.println(Modulus(9,3));
-        System.out.println(getInteger(1,10));
+        getInteger(1,10);
+
 
     }
 
@@ -36,20 +39,31 @@ public class MethodsExercises {
 
 
     //2.
+    // VALIDATE that the users input is between 1 - 10
+    // IF it's INVALID, prompt the user again
+    // but if it's VALID? What do we do, Exit the Loop?
 
-    public static int getInteger(int min, int max) {
+    public static void getInteger(int min, int max) {
         Scanner sc = new Scanner(System.in);
+        boolean wrongInput;
 
         do {
-            System.out.print("Enter a number between 1 and 10: ");
-            int userInput = getInteger(1, 10);
+            System.out.printf("Enter a number between %d and %d", min, max);
             int userNumber = Integer.parseInt(sc.next());
 
-            if(userInput != userNumber){
+            if(userNumber >= min && userNumber <= max){
+                wrongInput = false; //exits loop
+            } else{
                 System.out.println("Please Enter a number again: ");
+                wrongInput = true; //loop again
             }
 
-        } while (userNumber);
+        } while (wrongInput);
+        System.out.println("Thank you for entering a number within the range!");
+
     }
+
+    //3.
+
 
 }
