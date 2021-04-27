@@ -82,29 +82,54 @@ public class ControlFlowExercises {
 
         /** 3. Display a table of powers. */
 
+//        Scanner sc = new Scanner(System.in);
+//        boolean confirmation;
+//        do {
+//            System.out.print("Enter an integer: ");
+//            int userNumber = sc.nextInt();
+//            double userSquared = (Math.pow(userNumber, 2));
+//            double userCubed = (Math.pow(userNumber, 3));
+//
+//            System.out.println("Here is your table!");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            for (int i = 1; i <= userNumber; i++) {
+//
+//                System.out.println(userNumber + "      |" + userSquared + "      |" + userCubed);
+//            }
+//
+//            System.out.print("Continue? [y/n]\n");
+//            String userInput = sc.next();
+//            confirmation = userInput.equalsIgnoreCase("y");
+//
+//
+//        } while(confirmation);
+
+
+        /** 4. Convert given number grades into letter grades.*/
+
         Scanner sc = new Scanner(System.in);
         boolean confirmation;
         do {
-            System.out.print("Enter an integer: ");
-            int userNumber = sc.nextInt();
-            double userSquared = (Math.pow(userNumber, 2));
-            double userCubed = (Math.pow(userNumber, 3));
-
-            System.out.println("Here is your table!");
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-            for (int i = 1; i <= userNumber; i++) {
-
-                System.out.println(userNumber + "      |" + userSquared + "      |" + userCubed);
+            System.out.print("Enter your grade: ");
+            int userGrade = sc.nextInt();
+            if(userGrade >= 88) {
+                System.out.println("You got an A!! :)");
+            } else if(userGrade >= 80 ) {
+                System.out.println("You got a B!");
+            } else if(userGrade >= 67 ) {
+                System.out.println("You got a C.");
+            } else if(userGrade >= 60 ) {
+                System.out.println("You got a D. :(");
+            } else if(userGrade >= 0 ) {
+                System.out.println("You got an F. :'(");
             }
 
-            System.out.print("Continue? [y/n]\n");
+            System.out.println("Would you link to continue?[y/n]");
             String userInput = sc.next();
             confirmation = userInput.equalsIgnoreCase("y");
 
-
-        } while(confirmation);
-
+        } while (confirmation);
 
 
 
