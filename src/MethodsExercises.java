@@ -13,7 +13,9 @@ public class MethodsExercises {
 //        System.out.println(Division(8, 2));
 //        System.out.println(Modulus(9, 3));
 //        //getInteger(1,10);
-        getFactorial();
+        //getFactorial();
+        diceRoll();
+
 
     }
 
@@ -75,52 +77,68 @@ public class MethodsExercises {
     // CONTINUE if the user agrees //confirmation
 
 
-    public static void getFactorial() {
-        Scanner sc = new Scanner(System.in);
+//    public static void getFactorial() {
+//        Scanner sc = new Scanner(System.in);
+//        boolean confirmation;
+//
+//        do {
+//            System.out.printf("Enter a number between 1-10");
+//            int userNumber = sc.nextInt();
+//            System.out.println(userNumber);
+//
+//            //??How do we get the user's number to display the factors of itself
+//            // the first iteration @ 1
+//            // create the string in the body
+//            // the factorial solution
+//
+//            if(userNumber >= 1 && userNumber <= 10){
+//                long fact = 1;
+//                String emptyString = "";
+//
+//                for (int i = 1; i <= userNumber; i++) {
+//                    if (i == 1) {
+//                        //emptyString = emptyString + i;
+//                        System.out.printf("%d! = %d = %d\n", i, i, i); // i 3x to fill in the format
+//                    } else {
+//                        fact = fact * i;
+//                        //emptyString = emptyString + " x " + i;
+//                        System.out.printf("%d! = %d = %d\n", i,i, fact);
+//                    }
+//                }
+//            }
+//
+//            System.out.println("Would you link to continue?[y/n]");
+//            String userInput = sc.next();
+//            confirmation = userInput.equalsIgnoreCase("y");
+//
+//        }while(confirmation);
+//    }
+
+
+    //4. Create an application that simulates dice rolling:
+    public static void diceRoll(){
         boolean confirmation;
+        Scanner sc = new Scanner(System.in);
 
-        do {
-            System.out.printf("Enter a number between 1-10");
-            int userNumber = sc.nextInt();
-            System.out.println(userNumber);
+        System.out.println("Enter the number of sides for a pair of dice: ");
+        int diceSides = sc.nextInt();
 
-            //??How do we get the user's number to display the factors of itself
-            // the first iteration @ 1
-            // create the string in the body
-            // the factorial solution
+        int diceOne = (int) (Math.random() * diceSides) + 1;
+        System.out.println("Your first roll is a: " + diceOne);
 
-            if(userNumber >= 1 && userNumber <= 10){
-                long fact = 1;
-                String emptyString = "";
+        int diceTwo = (int) (Math.random() * diceSides) + 1;
+        System.out.println("Your first roll is a: " + diceTwo);
 
-                for (int i = 1; i <= userNumber; i++) {
-                    if (i == 1) {
-                        //emptyString = emptyString + i;
-                        System.out.printf("%d! = %d = %d\n", i, i, i); // i 3x to fill in the format
-                    } else {
-                        fact = fact * i;
-                        //emptyString = emptyString + " x " + i;
-                        System.out.printf("%d! = %d = %d\n", i,i, fact);
-                    }
-                }
-            }
-
-            System.out.println("Would you link to continue?[y/n]");
+        System.out.println("Would you link to continue?[y/n]");
             String userInput = sc.next();
             confirmation = userInput.equalsIgnoreCase("y");
 
-        }while(confirmation);
+            if(confirmation){
+                diceRoll();
+            }
+
     }
 
-
-//    4. Create an application that simulates dice rolling:
-
-//    public static int diceRoll() {
-//        Scanner sc = new Scanner(System.in);
-//        int diceOne = (int) (Math.random() * 6 - 1 + 1) + 1;
-//        int diceTwo = (int) (Math.random() * 6 - 1 + 1) + 1;
-//        System.out.println("Enter the number of Sides for a pair of dice: ");
-//    }
 
 
 }
