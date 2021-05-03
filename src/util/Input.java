@@ -3,8 +3,11 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private class scanner {
-        Scanner sc = new Scanner(System.in);
+    private Scanner sc;
+
+    public Input() {
+        this.sc = new Scanner(System.in); //every time an input is made, it will be assigned a new scanner to use
+    }
 
         public String getString() {
             return this.sc.nextLine();
@@ -45,7 +48,6 @@ public class Input {
             }
         }
 
-
         public double getDouble(){
             System.out.println("Enter a decimal number: ");
             double doubleNum = sc.nextInt();
@@ -53,7 +55,5 @@ public class Input {
         }
 
 
-
-
     }
-}
+
