@@ -14,8 +14,9 @@ public class Input {
         }
 
         public boolean yesNo() {
-            String input = sc.nextLine();
-            return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+            System.out.println("Please tell me yes: ");
+            String input = sc.next();
+            return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
         }
 
         public int getInt(int min, int max) {
@@ -23,10 +24,11 @@ public class Input {
             int num = sc.nextInt();
 
             if (num >= min && num <= max) {
+                System.out.println("Valid number!");
                 return num;
             } else {
                 System.out.println("Your number is invalid.");
-                return getInt(min, max);
+                return num;
             }
         }
 
