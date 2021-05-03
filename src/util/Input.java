@@ -27,6 +27,12 @@ public class Input {
             }
         }
 
+        public int getInt(){
+            System.out.println("Enter an integer: ");
+            int num = sc.nextInt();
+            return num;
+        }
+
         public double getDouble(double min, double max) {
             System.out.println("Enter a decimal number between " + min + " and " + max + ".");
             double num = sc.nextInt();
@@ -38,6 +44,15 @@ public class Input {
                 return getDouble(min, max);
             }
         }
+
+
+        public double getDouble(){
+            System.out.println("Enter a decimal number: ");
+            double doubleNum = sc.nextInt();
+            return doubleNum;
+        }
+
+
 
 
     }
