@@ -16,7 +16,7 @@ public class ServerNameGenerator {
     /** Create a method that will return a random element from an array of strings: */
 //?? random element? How??
 
-    public static String randomElement(String[] name){
-
-    }
+//    public static String randomElement(String[] name){
+//
+//    }
 }
