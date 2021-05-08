@@ -1,5 +1,6 @@
 package movies;
 
+/** This class has a static method named findAll that will return an array of Movie objects: */
 public class MoviesArray {
     public static Movie[] findAll() {
         return new Movie[]{
